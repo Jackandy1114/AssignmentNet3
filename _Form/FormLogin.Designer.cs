@@ -32,6 +32,8 @@
             this.btn_Login = new System.Windows.Forms.Button();
             this.tb_Password = new System.Windows.Forms.TextBox();
             this.tb_Username = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Login
@@ -52,10 +54,23 @@
             resources.ApplyResources(this.tb_Username, "tb_Username");
             this.tb_Username.Name = "tb_Username";
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
             // FormLogin
             // 
+            this.AcceptButton = this.btn_Login;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_Username);
             this.Controls.Add(this.tb_Password);
             this.Controls.Add(this.btn_Login);
@@ -72,5 +87,7 @@
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.TextBox tb_Password;
         private System.Windows.Forms.TextBox tb_Username;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
