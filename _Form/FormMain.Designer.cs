@@ -43,17 +43,17 @@
             this.tb_email = new System.Windows.Forms.TextBox();
             this.tb_sdt = new System.Windows.Forms.TextBox();
             this.tb_diachi = new System.Windows.Forms.RichTextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rd_male = new System.Windows.Forms.RadioButton();
+            this.rd_female = new System.Windows.Forms.RadioButton();
             this.px_hinhanh = new System.Windows.Forms.PictureBox();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_luu = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tb_tiengAnh = new System.Windows.Forms.TextBox();
+            this.tb_tinHoc = new System.Windows.Forms.TextBox();
+            this.tb_gdtc = new System.Windows.Forms.TextBox();
+            this.tb_diemTb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -91,6 +91,7 @@
             this.tb_search.Name = "tb_search";
             this.tb_search.Size = new System.Drawing.Size(229, 29);
             this.tb_search.TabIndex = 3;
+            this.tb_search.TextChanged += new System.EventHandler(this.tb_search_TextChanged);
             // 
             // lb_search
             // 
@@ -135,6 +136,8 @@
             this.grid_dsSV.ReadOnly = true;
             this.grid_dsSV.Size = new System.Drawing.Size(1227, 203);
             this.grid_dsSV.TabIndex = 6;
+         
+            this.grid_dsSV.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_dsSV_CellEnter);
             // 
             // label1
             // 
@@ -184,67 +187,68 @@
             // 
             this.tb_masv.Location = new System.Drawing.Point(237, 111);
             this.tb_masv.Name = "tb_masv";
-            this.tb_masv.Size = new System.Drawing.Size(144, 29);
+            this.tb_masv.Size = new System.Drawing.Size(242, 29);
             this.tb_masv.TabIndex = 11;
             // 
             // tb_hoten
             // 
             this.tb_hoten.Location = new System.Drawing.Point(237, 148);
             this.tb_hoten.Name = "tb_hoten";
-            this.tb_hoten.Size = new System.Drawing.Size(144, 29);
+            this.tb_hoten.Size = new System.Drawing.Size(242, 29);
             this.tb_hoten.TabIndex = 12;
             // 
             // tb_email
             // 
             this.tb_email.Location = new System.Drawing.Point(237, 189);
             this.tb_email.Name = "tb_email";
-            this.tb_email.Size = new System.Drawing.Size(144, 29);
+            this.tb_email.Size = new System.Drawing.Size(242, 29);
             this.tb_email.TabIndex = 13;
             // 
             // tb_sdt
             // 
             this.tb_sdt.Location = new System.Drawing.Point(237, 224);
             this.tb_sdt.Name = "tb_sdt";
-            this.tb_sdt.Size = new System.Drawing.Size(144, 29);
+            this.tb_sdt.Size = new System.Drawing.Size(242, 29);
             this.tb_sdt.TabIndex = 14;
             // 
             // tb_diachi
             // 
             this.tb_diachi.Location = new System.Drawing.Point(237, 294);
             this.tb_diachi.Name = "tb_diachi";
-            this.tb_diachi.Size = new System.Drawing.Size(144, 136);
+            this.tb_diachi.Size = new System.Drawing.Size(191, 136);
             this.tb_diachi.TabIndex = 16;
             this.tb_diachi.Text = "";
             // 
-            // radioButton1
+            // rd_male
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(237, 264);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(68, 28);
-            this.radioButton1.TabIndex = 17;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rd_male.AutoSize = true;
+            this.rd_male.Checked = true;
+            this.rd_male.Location = new System.Drawing.Point(237, 264);
+            this.rd_male.Name = "rd_male";
+            this.rd_male.Size = new System.Drawing.Size(68, 28);
+            this.rd_male.TabIndex = 17;
+            this.rd_male.TabStop = true;
+            this.rd_male.Text = "Nam";
+            this.rd_male.UseVisualStyleBackColor = true;
+            this.rd_male.CheckedChanged += new System.EventHandler(this.rd_male_CheckedChanged);
             // 
-            // radioButton2
+            // rd_female
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(328, 264);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(53, 28);
-            this.radioButton2.TabIndex = 18;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rd_female.AutoSize = true;
+            this.rd_female.Location = new System.Drawing.Point(328, 264);
+            this.rd_female.Name = "rd_female";
+            this.rd_female.Size = new System.Drawing.Size(53, 28);
+            this.rd_female.TabIndex = 18;
+            this.rd_female.Text = "Nữ";
+            this.rd_female.UseVisualStyleBackColor = true;
             // 
             // px_hinhanh
             // 
             this.px_hinhanh.Image = global::Assignment.Properties.Resources._1;
-            this.px_hinhanh.Location = new System.Drawing.Point(536, 111);
+            this.px_hinhanh.Location = new System.Drawing.Point(485, 111);
             this.px_hinhanh.Name = "px_hinhanh";
-            this.px_hinhanh.Size = new System.Drawing.Size(140, 142);
-            this.px_hinhanh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.px_hinhanh.Size = new System.Drawing.Size(195, 179);
+            this.px_hinhanh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.px_hinhanh.TabIndex = 19;
             this.px_hinhanh.TabStop = false;
             // 
@@ -285,33 +289,33 @@
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tb_tiengAnh
             // 
-            this.textBox1.Location = new System.Drawing.Point(536, 296);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 29);
-            this.textBox1.TabIndex = 24;
+            this.tb_tiengAnh.Location = new System.Drawing.Point(536, 296);
+            this.tb_tiengAnh.Name = "tb_tiengAnh";
+            this.tb_tiengAnh.Size = new System.Drawing.Size(144, 29);
+            this.tb_tiengAnh.TabIndex = 24;
             // 
-            // textBox2
+            // tb_tinHoc
             // 
-            this.textBox2.Location = new System.Drawing.Point(536, 331);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(144, 29);
-            this.textBox2.TabIndex = 25;
+            this.tb_tinHoc.Location = new System.Drawing.Point(536, 331);
+            this.tb_tinHoc.Name = "tb_tinHoc";
+            this.tb_tinHoc.Size = new System.Drawing.Size(144, 29);
+            this.tb_tinHoc.TabIndex = 25;
             // 
-            // textBox3
+            // tb_gdtc
             // 
-            this.textBox3.Location = new System.Drawing.Point(536, 366);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(144, 29);
-            this.textBox3.TabIndex = 26;
+            this.tb_gdtc.Location = new System.Drawing.Point(536, 366);
+            this.tb_gdtc.Name = "tb_gdtc";
+            this.tb_gdtc.Size = new System.Drawing.Size(144, 29);
+            this.tb_gdtc.TabIndex = 26;
             // 
-            // textBox4
+            // tb_diemTb
             // 
-            this.textBox4.Location = new System.Drawing.Point(536, 401);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(144, 29);
-            this.textBox4.TabIndex = 27;
+            this.tb_diemTb.Location = new System.Drawing.Point(536, 401);
+            this.tb_diemTb.Name = "tb_diemTb";
+            this.tb_diemTb.Size = new System.Drawing.Size(144, 29);
+            this.tb_diemTb.TabIndex = 27;
             // 
             // label6
             // 
@@ -351,83 +355,115 @@
             // 
             // maSV
             // 
+            this.maSV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.maSV.DataPropertyName = "maSV";
+            this.maSV.FillWeight = 304.5685F;
             this.maSV.HeaderText = "Mã sinh viên";
+            this.maSV.MinimumWidth = 100;
             this.maSV.Name = "maSV";
             this.maSV.ReadOnly = true;
             // 
             // hoTen
             // 
+            this.hoTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.hoTen.DataPropertyName = "hoTen";
+            this.hoTen.FillWeight = 257.9662F;
             this.hoTen.HeaderText = "Họ tên";
+            this.hoTen.MinimumWidth = 200;
             this.hoTen.Name = "hoTen";
             this.hoTen.ReadOnly = true;
+            this.hoTen.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // email
             // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.email.DataPropertyName = "email";
+            this.email.FillWeight = 32.76281F;
             this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 250;
             this.email.Name = "email";
             this.email.ReadOnly = true;
+            this.email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // soDT
             // 
+            this.soDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.soDT.DataPropertyName = "soDT";
+            this.soDT.FillWeight = 3.648585F;
             this.soDT.HeaderText = "Số điện thoại";
+            this.soDT.MinimumWidth = 150;
             this.soDT.Name = "soDT";
             this.soDT.ReadOnly = true;
+            this.soDT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // gioiTinh
             // 
+            this.gioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.gioiTinh.DataPropertyName = "gioiTinh";
             this.gioiTinh.HeaderText = "Giới tính";
             this.gioiTinh.Name = "gioiTinh";
             this.gioiTinh.ReadOnly = true;
+            this.gioiTinh.Visible = false;
             // 
             // diaChi
             // 
+            this.diaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.diaChi.DataPropertyName = "diaChi";
+            this.diaChi.FillWeight = 1.024138F;
             this.diaChi.HeaderText = "Địa chỉ";
+            this.diaChi.MinimumWidth = 250;
             this.diaChi.Name = "diaChi";
             this.diaChi.ReadOnly = true;
             // 
             // hinh
             // 
+            this.hinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.hinh.DataPropertyName = "hinh";
             this.hinh.HeaderText = "Hình";
             this.hinh.Name = "hinh";
             this.hinh.ReadOnly = true;
+            this.hinh.Visible = false;
             // 
             // tiengAnh
             // 
+            this.tiengAnh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tiengAnh.DataPropertyName = "tiengAnh";
             this.tiengAnh.HeaderText = "Tiếng Anh";
+            this.tiengAnh.MinimumWidth = 75;
             this.tiengAnh.Name = "tiengAnh";
             this.tiengAnh.ReadOnly = true;
             this.tiengAnh.Visible = false;
             // 
             // tinHoc
             // 
+            this.tinHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tinHoc.DataPropertyName = "tinHoc";
             this.tinHoc.HeaderText = "Tin Học";
+            this.tinHoc.MinimumWidth = 75;
             this.tinHoc.Name = "tinHoc";
             this.tinHoc.ReadOnly = true;
             this.tinHoc.Visible = false;
             // 
             // gdtc
             // 
+            this.gdtc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.gdtc.DataPropertyName = "gdtc";
             this.gdtc.HeaderText = "GDTC";
+            this.gdtc.MinimumWidth = 75;
             this.gdtc.Name = "gdtc";
             this.gdtc.ReadOnly = true;
             this.gdtc.Visible = false;
             // 
             // diemTB
             // 
+            this.diemTB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.diemTB.DataPropertyName = "diemTB";
+            this.diemTB.FillWeight = 0.02977145F;
             this.diemTB.HeaderText = "Điểm TB";
+            this.diemTB.MinimumWidth = 100;
             this.diemTB.Name = "diemTB";
             this.diemTB.ReadOnly = true;
+            this.diemTB.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // FormMain
             // 
@@ -438,17 +474,17 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_diemTb);
+            this.Controls.Add(this.tb_gdtc);
+            this.Controls.Add(this.tb_tinHoc);
+            this.Controls.Add(this.tb_tiengAnh);
             this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_luu);
             this.Controls.Add(this.btn_them);
             this.Controls.Add(this.px_hinhanh);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rd_female);
+            this.Controls.Add(this.rd_male);
             this.Controls.Add(this.tb_diachi);
             this.Controls.Add(this.tb_sdt);
             this.Controls.Add(this.tb_email);
@@ -494,17 +530,17 @@
         private System.Windows.Forms.TextBox tb_email;
         private System.Windows.Forms.TextBox tb_sdt;
         private System.Windows.Forms.RichTextBox tb_diachi;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rd_male;
+        private System.Windows.Forms.RadioButton rd_female;
         private System.Windows.Forms.PictureBox px_hinhanh;
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_luu;
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_sua;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tb_tiengAnh;
+        private System.Windows.Forms.TextBox tb_tinHoc;
+        private System.Windows.Forms.TextBox tb_gdtc;
+        private System.Windows.Forms.TextBox tb_diemTb;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
