@@ -130,7 +130,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btn_Login.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btn_Login.Text" xml:space="preserve">
     <value>Đăng nhập</value>
@@ -157,7 +157,7 @@
     <value>265, 29</value>
   </data>
   <data name="tb_Password.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;tb_Password.Name" xml:space="preserve">
     <value>tb_Password</value>
@@ -181,7 +181,7 @@
     <value>265, 29</value>
   </data>
   <data name="tb_Username.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;tb_Username.Name" xml:space="preserve">
     <value>tb_Username</value>

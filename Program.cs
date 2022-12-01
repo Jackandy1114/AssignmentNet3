@@ -9,9 +9,11 @@ namespace Assignment
         public static bool isLogin { get; set; } = false;
         public static bool isLoading { get; set; } = true;
         public static string role { get; set; }
-        public static Dictionary<int, string> roles = new Dictionary<int, string>() {
+        public static ASMWINFORMEntities db = new ASMWINFORMEntities();
 
-            {1,"Admin" },{ 2, "GiangVien" },{ 3, "CanBo" }
+        public static Dictionary<string, string> roles = new Dictionary<string, string>() {
+
+            {"Admin","Admin" },{ "GiangVien","Giảng viên" },{ "CanBo" , "Cán bộ" }
     };
 
         /// <summary>

@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\dssv.cs" />
     <Compile Include="_Form\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>

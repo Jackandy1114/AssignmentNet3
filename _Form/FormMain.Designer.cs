@@ -32,18 +32,7 @@
             this.tb_search = new System.Windows.Forms.TextBox();
             this.lb_search = new System.Windows.Forms.Label();
             this.lb_masv = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.maSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tiengAnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gdtc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diemTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grid_dsSV = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,7 +50,26 @@
             this.btn_luu = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.maSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tiengAnh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gdtc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diemTB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_dsSV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.px_hinhanh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +87,7 @@
             // 
             this.tb_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_search.Location = new System.Drawing.Point(1010, 12);
-            this.tb_search.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tb_search.Margin = new System.Windows.Forms.Padding(6);
             this.tb_search.Name = "tb_search";
             this.tb_search.Size = new System.Drawing.Size(229, 29);
             this.tb_search.TabIndex = 3;
@@ -104,10 +112,13 @@
             this.lb_masv.TabIndex = 5;
             this.lb_masv.Text = "Mã SV";
             // 
-            // dataGridView1
+            // grid_dsSV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grid_dsSV.AllowUserToAddRows = false;
+            this.grid_dsSV.AllowUserToDeleteRows = false;
+            this.grid_dsSV.AllowUserToOrderColumns = true;
+            this.grid_dsSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_dsSV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maSV,
             this.hoTen,
             this.email,
@@ -119,68 +130,11 @@
             this.tinHoc,
             this.gdtc,
             this.diemTB});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 466);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1227, 203);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // maSV
-            // 
-            this.maSV.HeaderText = "Mã sinh viên";
-            this.maSV.Name = "maSV";
-            // 
-            // hoTen
-            // 
-            this.hoTen.HeaderText = "Họ tên";
-            this.hoTen.Name = "hoTen";
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            // 
-            // soDT
-            // 
-            this.soDT.HeaderText = "Số điện thoại";
-            this.soDT.Name = "soDT";
-            // 
-            // gioiTinh
-            // 
-            this.gioiTinh.HeaderText = "Giới tính";
-            this.gioiTinh.Name = "gioiTinh";
-            // 
-            // diaChi
-            // 
-            this.diaChi.HeaderText = "Địa chỉ";
-            this.diaChi.Name = "diaChi";
-            // 
-            // hinh
-            // 
-            this.hinh.HeaderText = "Hình";
-            this.hinh.Name = "hinh";
-            // 
-            // tiengAnh
-            // 
-            this.tiengAnh.HeaderText = "Tiếng Anh";
-            this.tiengAnh.Name = "tiengAnh";
-            this.tiengAnh.Visible = false;
-            // 
-            // tinHoc
-            // 
-            this.tinHoc.HeaderText = "Tin Học";
-            this.tinHoc.Name = "tinHoc";
-            this.tinHoc.Visible = false;
-            // 
-            // gdtc
-            // 
-            this.gdtc.HeaderText = "GDTC";
-            this.gdtc.Name = "gdtc";
-            this.gdtc.Visible = false;
-            // 
-            // diemTB
-            // 
-            this.diemTB.HeaderText = "Điểm TB";
-            this.diemTB.Name = "diemTB";
+            this.grid_dsSV.Location = new System.Drawing.Point(15, 466);
+            this.grid_dsSV.Name = "grid_dsSV";
+            this.grid_dsSV.ReadOnly = true;
+            this.grid_dsSV.Size = new System.Drawing.Size(1227, 203);
+            this.grid_dsSV.TabIndex = 6;
             // 
             // label1
             // 
@@ -258,7 +212,7 @@
             // 
             this.tb_diachi.Location = new System.Drawing.Point(237, 294);
             this.tb_diachi.Name = "tb_diachi";
-            this.tb_diachi.Size = new System.Drawing.Size(144, 96);
+            this.tb_diachi.Size = new System.Drawing.Size(144, 136);
             this.tb_diachi.TabIndex = 16;
             this.tb_diachi.Text = "";
             // 
@@ -331,11 +285,163 @@
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(536, 296);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(144, 29);
+            this.textBox1.TabIndex = 24;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(536, 331);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(144, 29);
+            this.textBox2.TabIndex = 25;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(536, 366);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(144, 29);
+            this.textBox3.TabIndex = 26;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(536, 401);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(144, 29);
+            this.textBox4.TabIndex = 27;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(434, 301);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 24);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Tiếng anh";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(456, 336);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 24);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Tin học";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(468, 371);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 24);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "GDTC";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(447, 406);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 24);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Điểm TB";
+            // 
+            // maSV
+            // 
+            this.maSV.DataPropertyName = "maSV";
+            this.maSV.HeaderText = "Mã sinh viên";
+            this.maSV.Name = "maSV";
+            this.maSV.ReadOnly = true;
+            // 
+            // hoTen
+            // 
+            this.hoTen.DataPropertyName = "hoTen";
+            this.hoTen.HeaderText = "Họ tên";
+            this.hoTen.Name = "hoTen";
+            this.hoTen.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // soDT
+            // 
+            this.soDT.DataPropertyName = "soDT";
+            this.soDT.HeaderText = "Số điện thoại";
+            this.soDT.Name = "soDT";
+            this.soDT.ReadOnly = true;
+            // 
+            // gioiTinh
+            // 
+            this.gioiTinh.DataPropertyName = "gioiTinh";
+            this.gioiTinh.HeaderText = "Giới tính";
+            this.gioiTinh.Name = "gioiTinh";
+            this.gioiTinh.ReadOnly = true;
+            // 
+            // diaChi
+            // 
+            this.diaChi.DataPropertyName = "diaChi";
+            this.diaChi.HeaderText = "Địa chỉ";
+            this.diaChi.Name = "diaChi";
+            this.diaChi.ReadOnly = true;
+            // 
+            // hinh
+            // 
+            this.hinh.DataPropertyName = "hinh";
+            this.hinh.HeaderText = "Hình";
+            this.hinh.Name = "hinh";
+            this.hinh.ReadOnly = true;
+            // 
+            // tiengAnh
+            // 
+            this.tiengAnh.DataPropertyName = "tiengAnh";
+            this.tiengAnh.HeaderText = "Tiếng Anh";
+            this.tiengAnh.Name = "tiengAnh";
+            this.tiengAnh.ReadOnly = true;
+            this.tiengAnh.Visible = false;
+            // 
+            // tinHoc
+            // 
+            this.tinHoc.DataPropertyName = "tinHoc";
+            this.tinHoc.HeaderText = "Tin Học";
+            this.tinHoc.Name = "tinHoc";
+            this.tinHoc.ReadOnly = true;
+            this.tinHoc.Visible = false;
+            // 
+            // gdtc
+            // 
+            this.gdtc.DataPropertyName = "gdtc";
+            this.gdtc.HeaderText = "GDTC";
+            this.gdtc.Name = "gdtc";
+            this.gdtc.ReadOnly = true;
+            this.gdtc.Visible = false;
+            // 
+            // diemTB
+            // 
+            this.diemTB.DataPropertyName = "diemTB";
+            this.diemTB.HeaderText = "Điểm TB";
+            this.diemTB.Name = "diemTB";
+            this.diemTB.ReadOnly = true;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1254, 681);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_luu);
@@ -353,19 +459,19 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grid_dsSV);
             this.Controls.Add(this.lb_masv);
             this.Controls.Add(this.lb_search);
             this.Controls.Add(this.tb_search);
             this.Controls.Add(this.lb_role);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang Chủ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_dsSV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.px_hinhanh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -377,18 +483,7 @@
         private System.Windows.Forms.TextBox tb_search;
         private System.Windows.Forms.Label lb_search;
         private System.Windows.Forms.Label lb_masv;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maSV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hoTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tiengAnh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tinHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gdtc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diemTB;
+        private System.Windows.Forms.DataGridView grid_dsSV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -406,5 +501,24 @@
         private System.Windows.Forms.Button btn_luu;
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_sua;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tiengAnh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tinHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gdtc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diemTB;
     }
 }

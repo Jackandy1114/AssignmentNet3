@@ -54,6 +54,7 @@
             // 
             // FormLogin
             // 
+            this.AcceptButton = this.btn_Login;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tb_Username);
