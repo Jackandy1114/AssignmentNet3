@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Assignment
+namespace Assignment._Form
 {
     public partial class FormMain : Form
     {
@@ -27,7 +27,7 @@ namespace Assignment
             lb_role.Text = query.FirstOrDefault().Value;
             if (query.FirstOrDefault().Value == Program.roles[1])
             {
-                button1.Enabled = false;
+
             }
         }
 

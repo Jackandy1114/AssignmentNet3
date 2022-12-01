@@ -1,4 +1,4 @@
-﻿namespace Assignment
+﻿namespace Assignment._Form
 {
     partial class FormLogin
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.btn_Login = new System.Windows.Forms.Button();
             this.tb_Password = new System.Windows.Forms.TextBox();
             this.tb_Username = new System.Windows.Forms.TextBox();
@@ -35,38 +36,30 @@
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(331, 317);
+            resources.ApplyResources(this.btn_Login, "btn_Login");
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(75, 23);
-            this.btn_Login.TabIndex = 0;
-            this.btn_Login.Text = "Đăng nhập";
             this.btn_Login.UseVisualStyleBackColor = true;
             this.btn_Login.Click += new System.EventHandler(this.button1_Click);
             // 
             // tb_Password
             // 
-            this.tb_Password.Location = new System.Drawing.Point(331, 269);
+            resources.ApplyResources(this.tb_Password, "tb_Password");
             this.tb_Password.Name = "tb_Password";
-            this.tb_Password.Size = new System.Drawing.Size(233, 20);
-            this.tb_Password.TabIndex = 1;
+            this.tb_Password.UseSystemPasswordChar = true;
             // 
             // tb_Username
             // 
-            this.tb_Username.Location = new System.Drawing.Point(331, 206);
+            resources.ApplyResources(this.tb_Username, "tb_Username");
             this.tb_Username.Name = "tb_Username";
-            this.tb_Username.Size = new System.Drawing.Size(233, 20);
-            this.tb_Username.TabIndex = 2;
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tb_Username);
             this.Controls.Add(this.tb_Password);
             this.Controls.Add(this.btn_Login);
             this.Name = "FormLogin";
-            this.Text = "FormLogin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);

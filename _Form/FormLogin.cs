@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Assignment
+namespace Assignment._Form
 {
     public partial class FormLogin : Form
     {

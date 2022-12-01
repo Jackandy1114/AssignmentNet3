@@ -28,11 +28,11 @@ namespace Assignment
             {
                 while (!isLogin && isLoading)
                 {
-                    Application.Run(new FormLogin());
+                    Application.Run(new _Form.FormLogin());
                 }
                 if (isLogin)
                 {
-                    Application.Run(new FormMain());
+                    Application.Run(new _Form.FormMain());
                 }
             }
         }
